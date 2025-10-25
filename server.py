@@ -23,7 +23,7 @@ class Handler(BaseHTTPRequestHandler):
             "hostname": HOSTNAME,
             "client_ip_seen_by_vm": self.client_address[0],
             "outbound_ip_seen_by_internet": get_outbound_ip(),
-            "message": "Hello from an Azure VM behind a Standard Load Balancer + NAT Gateway"
+            "message": "Hello from the Server!"
         }
         body = f"""<!doctype html><html><head><meta charset="utf-8"><title>az-whoami</title></head>
 <body><pre>{json.dumps(payload, indent=2)}</pre></body></html>"""
